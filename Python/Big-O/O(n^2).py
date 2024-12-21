@@ -7,3 +7,12 @@ def print_items(n):
 print_items(10)
 
 # O(n^2) is not efficient at a time complexity point of view because on the graph it is actually steeper
+
+
+# I want to have some fun, try working on maybe O(n^3)
+def items(n):
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                print(i, j, k)
+items(10)
