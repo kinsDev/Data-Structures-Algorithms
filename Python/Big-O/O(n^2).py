@@ -5,3 +5,5 @@ def print_items(n):
         for j in range(n):
             print(i, j)
 print_items(10)
+
+# O(n^2) is not efficient at a time complexity point of view because on the graph it is actually steeper
