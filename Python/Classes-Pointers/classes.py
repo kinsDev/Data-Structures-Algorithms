@@ -18,3 +18,8 @@ cookie_one.set_color("yellow")
 
 print("\nCookie one is", cookie_one.get_color())
 print("Cookie two is", cookie_two.get_color())
+
+# A class
+# A constructor (__init__)
+# A method 
+# An instance variable
