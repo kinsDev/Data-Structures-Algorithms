@@ -31,7 +31,7 @@ class LinkedList:
     
     def pop(self):
         if self.length == 0:
-            return False
+            return None
         if self.length == 1:
             popped_node = self.head
             self.head = None
