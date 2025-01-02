@@ -48,6 +48,17 @@ class LinkedList:
             self.head = None
             self.tail = None
         return temp.value
+    
+    def prepend(self, value):
+        new_node = Node(value)
+        if self.length == 0:
+           self.head = new_node
+           self.tail = new_node
+        else:
+            new_node.next = self.head
+            self.head = new_node
+        self.length += 1
+        return True 
 
 
 my_linked_list = LinkedList(1)
@@ -55,4 +66,7 @@ my_linked_list.append(2)
 my_linked_list.printer()
 print("\n")
 print("Popped value is", my_linked_list.pop())
+my_linked_list.printer()
+print("\n")
+my_linked_list.prepend(2)
 my_linked_list.printer()
