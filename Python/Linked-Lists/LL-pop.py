@@ -11,7 +11,7 @@ def pop(self):
     # the previous node which will be where the pre will be located    
     self.tail = pre
     self.tail.next = None
-    self.lenght -= 1
+    self.length -= 1
     if self.length == 0:
         self.head = None
         self.tail = None
