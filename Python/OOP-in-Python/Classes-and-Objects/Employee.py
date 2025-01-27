@@ -39,3 +39,29 @@ Steve = Employees()
 print("Steve's ID No. is", Steve.id)
 print("Steve's salary is", Steve.salarys)
 print("Steve's department is", Steve.departments)
+print("\n")
+
+# Now let's create properties outside a Class
+# In the already existing ID, salary, department properties on the Employee class, we will add the title property
+
+class Stuff:
+    # properties of a stuff member
+    ID = None
+    salary = None
+    department = None
+
+# create an object for that class
+Kaimenyi = Stuff()
+
+# Assign values to the properties of Kaimenyi - an object of the Stuff class
+Kaimenyi.ID = 388700
+Kaimenyi.salary = 4000
+Kaimenyi.department = "Technical"
+# Adding another property that wasn't a part of the initial class properties
+Kaimenyi.title = "Machine Learning Engineer"
+
+# printing properties of Kaimenyi
+print("ID:", Kaimenyi.ID)
+print("salary:", Kaimenyi.salary)
+print("department:", Kaimenyi.department)
+print("title:", Kaimenyi.title)
