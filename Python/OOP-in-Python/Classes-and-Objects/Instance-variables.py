@@ -3,6 +3,7 @@
 
 # Class variables share properties for all objects in a class while instance variables have unique properties for objects in a class
 
+# First example, just commented out
 # class Player:
     # Class variable
 #    teamName = "Liverpool"
@@ -22,7 +23,7 @@
 
 
 
-# Another example
+# Second example
 class Player:
     # class variable
     TeamName = "Liverpool"
@@ -37,3 +38,23 @@ player2 = Player("Christiano Ronaldo", "Real Madrid")
 
 print(f"Player Name: {player1.playerName}, Current Team is: {Player.TeamName}, Previous Team is: {player1.previousTeam}")
 print(f"Player Name: {player2.playerName}, Current Team is: {Player.TeamName}, Previous Team is: {player2.previousTeam}")
+
+print("\n")
+
+# Third and Final exaple. This will be on people owning cars "Yes as a collective"
+# And what cars to be specific since they will own unique cars from one another
+
+class Car:
+    # Class variables
+    ownCars = "Yes"
+
+    # Instance variables
+    def __init__(self, carOwnerName, typeOfCar):
+        self.carOwnerName = carOwnerName
+        self.typeOfCar = typeOfCar
+
+Owner1 = Car("Kinsley Kaimenyi", "Mercedes")
+Owner2 = Car("Loved Ones", "Bugahtti")
+
+print(f"Is it: {Car.ownCars}? The first car owner's name is: {Owner1.carOwnerName}, and he owns this car: {Owner1.typeOfCar}")
+print(f"Is it: {Car.ownCars}? The second car owner will go to a collective of my: {Owner2.carOwnerName}, and they own a: {Owner2.typeOfCar}")
