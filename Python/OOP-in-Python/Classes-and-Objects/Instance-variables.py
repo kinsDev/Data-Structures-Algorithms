@@ -3,23 +3,23 @@
 
 # Class variables share properties for all objects in a class while instance variables have unique properties for objects in a class
 
-# First example, just commented out
-# class Player:
+First example, just commented out
+class Player:
     # Class variable
-#    teamName = "Liverpool"
+   teamName = "Liverpool"
 
     # Instance variable
-#     def __init__(self, playerName):
-#         self.playerName = playerName
+    def __init__(self, playerName):
+        self.playerName = playerName
 
-# p1 = Player("Kinsley")
-# p2 = Player("Kaimenyi")
+p1 = Player("Kinsley")
+p2 = Player("Kaimenyi")
 
-# print("Player Name", p1.playerName)
-# print("Player 1 team name", p1.teamName)
-# print("\n")
-# print("Player Name", p2.playerName)
-# print("Player 2 team name", p2.teamName)
+print("Player Name", p1.playerName)
+print("Player 1 team name", p1.teamName)
+print("\n")
+print("Player Name", p2.playerName)
+print("Player 2 team name", p2.teamName)
 
 
 
@@ -58,3 +58,28 @@ Owner2 = Car("Loved Ones", "Bugahtti")
 
 print(f"Is it: {Car.ownCars}? The first car owner's name is: {Owner1.carOwnerName}, and he owns this car: {Owner1.typeOfCar}")
 print(f"Is it: {Car.ownCars}? The second car owner will go to a collective of my: {Owner2.carOwnerName}, and they own a: {Owner2.typeOfCar}")
+
+
+# Using Class Variables Smartly
+# Class variables are useful when implementing properties that should be common and accessible to all class objects
+class Player:
+    # class variable
+    teamName = "Liverpool"
+    teamMembers = []
+
+    # instance variable
+    def __init__(self, name):
+        self.name = name
+        self.formerTeams = []
+        self.teamMembers.append(self.name)
+
+p1 = Player("Kinsley")
+p2 = Player("Kaimenyi")
+
+print("Name:", p1.name)
+print("Team Members:")
+print(p1.teamMembers)
+print("")
+print("Name:", p2.name)
+print("Team Members:")
+print(p2.teamMembers)
