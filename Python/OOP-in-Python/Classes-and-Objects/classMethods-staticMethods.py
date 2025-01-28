@@ -40,3 +40,16 @@ p1 = Player("lol")
 p1.demo()
 Player.demo()
 print(Player.teamName)
+print("\n")
+
+
+# Let's create a static function (utility function) for calculating BMI
+class BodyInfo:
+
+    @staticmethod
+    def bmi(weight, height):
+        return weight / (height **2)
+
+weight = 75
+height = 1.8
+print(BodyInfo.bmi(weight, height))
