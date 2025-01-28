@@ -3,13 +3,13 @@
 
 # Class variables share properties for all objects in a class while instance variables have unique properties for objects in a class
 
-First example, just commented out
+# First example, just commented out
 class Player:
     # Class variable
    teamName = "Liverpool"
-
-    # Instance variable
-    def __init__(self, playerName):
+   
+   # Instance variable
+   def __init__(self, playerName):
         self.playerName = playerName
 
 p1 = Player("Kinsley")
