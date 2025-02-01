@@ -27,6 +27,8 @@ print(obj1.getRollNumber())
 
 
 # Lets solve this question without using the init method
+# We have initialized the two properties name & rollNumber on the two set methods
+# That eliminated the need to use the initializers
 class Student:
     def setName(self, name):
         self.__name = name
