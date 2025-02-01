@@ -9,9 +9,11 @@
 # Parent Class(Super Class or Base Class): This class allows the reuse of its public properties in another class .
 # Child Class(Sub Class or Derived Class): This class inherits or extends the superclass.
 
-class ParentClass:
+class ProgrammingLanguage:
     # attributes of the parent class
+    pass
 
-class ChildClass(ParentClass):
+class Python(ProgrammingLanguage):
     # public attributes of the ParentClass
     # attributes of the ChildClass
+    pass
