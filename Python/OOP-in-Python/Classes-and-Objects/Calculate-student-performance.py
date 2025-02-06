@@ -10,8 +10,8 @@ class Student:
     # methods
     def totalObtained(self):
         # instance variable
-        marksObtained = self.phy + self.chem + self.bio # marksObtained is a local method within the totalObtained method
-        return marksObtained
+        marksObtained = self.phy + self.chem + self.bio 
+        return marksObtained  # marksObtained is a local method within the totalObtained method
     # to get the total marks I should call the totalObtained method
     def percentage(self):
         return (self.totalObtained()/300) * 100
