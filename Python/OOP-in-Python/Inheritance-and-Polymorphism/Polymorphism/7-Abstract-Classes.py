@@ -23,4 +23,9 @@ class Square(Shape):
     def perimeter(self):
         return (4 * self.length)
 
-square = Square(4)
+square = Square(4) # object of square was instantiated
+
+# When we define the methods, area and perimeter, in the child class Square, 
+# an object of Shape cannot be instantiated, but an object of Square can be.
+# We allow the user to have a free hand over the definition of the methods while also making sure that the methods are defined.
+# Methods with @abstractmethod decorators must be defined in the child class.
