@@ -50,3 +50,6 @@ class Car:
 
 car = Car(2500, 4, 2, "Red") # creating a car object from the Car class
 car.printDetails()
+
+# We have created a Car class which contains the objects of Engine, Tires, and Doors classes. 
+# Car class is responsible for their lifetime, i.e., when Car dies, so does tire, engine, and doors too.
