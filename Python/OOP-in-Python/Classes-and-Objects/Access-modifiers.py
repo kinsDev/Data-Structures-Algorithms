@@ -6,7 +6,7 @@ class Employee:
         self.ID = ID
         self.salary = salary
 
-    # A public method to display the ID - to shocase that I can access this info
+    # A public method to display the ID - to showcase that I can access this info
     # from inside and outside the class
     def displayID(self):
         #print("ID from inside class", self.ID)
