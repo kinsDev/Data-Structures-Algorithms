@@ -1,4 +1,4 @@
-# Methods cannot be explicitly overoaded in Python but can be implicitly overloaded
+# Methods cannot be explicitly overloaded in Python but can be implicitly overloaded
 # It is a good practice to overload methods in Python to be able to save computer memory
 
 class Employee:
@@ -42,6 +42,15 @@ print("\n")
 
 print("Demo 4")
 Steve.demo("Kinsley", "K", "G", "texty", "Machine Learning Engineer")
+print("\n")
+
+#print("Demo 5")
+# Steve.demo("Dooly", 7) # We will have this error here: missing 1 required positional argument: 'c'
+#print("\n")
+
+# We will have this error below here: takes from 4 to 6 positional arguments but 7 were given
+#print("Demo 6")
+#Steve.demo("Kinsley", "K", "G", "texty", "Machine Learning Engineer", "can")
 
 # If we redefine a method several times, and give it different arguments,
 # Python uses the latest method definition for its implementation
