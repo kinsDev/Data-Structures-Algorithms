@@ -6,7 +6,7 @@
 
 # In inheritance, in order to create a new class based on an existing class, 
 # we use the following terminology:
-# Parent Class(Super Class or Base Class): This class allows the reuse of its public properties in another class .
+# Parent Class(Super Class or Base Class): This class allows the reuse of its public properties in another class.
 # Child Class(Sub Class or Derived Class): This class inherits or extends the superclass.
 
 class ProgrammingLanguage:
