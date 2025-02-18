@@ -4,10 +4,11 @@ class Parent:
 
 class Child(Parent):
     def __init__(self):
-        self.a = Parent() # inside a Child object, there's an attribute that holds a separate Parent object
-    # overridden prn() method
+        self.a = Parent() 
+        # inside a Child object, there's an attribute that holds a separate Parent object
+        # overridden prn() method
     def prn(self):
-        print("Child") # the Child class has it's own prn() mthod that overrides the prn() method from the Parent class
+        print("Child") # the Child class has it's own prn() method that overrides the prn() method from the Parent class
 
 temp = Child() # this creates an instance of the Child Class
 temp.a.prn() # __init__ method of Child is called. self.a = Parent() creates a new Parent object, and assigns it to temp.a
