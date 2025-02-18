@@ -110,7 +110,7 @@ car.printDetails()
 
 
 # 5. Hybrid Inheritance
-# It is a combination of Multiple and Multi-level inheritance
+# It is a combination of Multiple(more than one immediate class) and Multi-level(derived from a class derived from another class) inheritance
 # We are saying this because, a class is derived from more than one immediate Parent Class making it (multi-level)
 # And those multiple immediate Parent classes are derived from another Parent class, making it (multiple)
 # e.g CombustionEngine is a Engine
