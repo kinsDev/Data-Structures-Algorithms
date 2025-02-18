@@ -30,12 +30,17 @@ class AnimalSound:
     def Sound(self, animal):
         animal.Speak() # calling the methods in other classes
 
-sound = AnimalSound()
-dog = Dog()
-cat = Cat()
+sound = AnimalSound() # object in the AnimalSound class
+dog = Dog() # object in the Dog class
+cat = Cat() # oject in the Cat class
 
 sound.Sound(dog)
 sound.Sound(cat)
+# sound is an instance of AnimalSound.
+# sound expects an argument animal, and here dog(which is an instance of Dog) is passed
+# Inside Sound, animal.Speak() is executed. Since animal is a dog, dog.speak() is called, printing "woof woof" 
+
+
 
 # In layman terms, since both the animals, dog and cats, can speak like animals, 
 # they both are animals. This is how we have achieved polymorphism without inheritance.
