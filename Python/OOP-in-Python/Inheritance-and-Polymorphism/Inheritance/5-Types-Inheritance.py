@@ -22,7 +22,7 @@ corolla.openTrunk # accessing method from its own class
 
 
 # 2. Multi-level inheritance
-#When a class is derived from a class which itself is derived from another class, it is called multilevel inheritance. 
+# When a class is derived from a class which itself is derived from another class, it is called multilevel inheritance. 
 # We can extend the classes to as many levels as we want to
 
 # e.g A Car is a Vehicle
@@ -73,7 +73,6 @@ corolla.setTopSpeed(250)
 
 volvo = Truck() # creating object of the Truck class
 volvo.setTopSpeed(160)
-
 
 
 
