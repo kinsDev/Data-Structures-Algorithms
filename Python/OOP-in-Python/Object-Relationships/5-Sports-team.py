@@ -41,3 +41,23 @@ class School:
         # I need to iterate through all teams in self.teams and sum up their player counts.
         total_players = sum(team.getNumberOfPlayers() for team in self.teams)
         return total_players
+
+
+p1 = Player(1, "Harris", "Red")
+p2 = Player(2, "Carol", "Red")
+p3 = Player(1, "Johnny", "Blue")
+p4 = Player(2, "Sarah", "Blue")
+
+red_team = Team("Red Team")
+red_team.addPlayer(p1)
+red_team.addPlayer(p2)
+
+blue_team = Team("Blue Team")
+blue_team.addPlayer(p2)
+blue_team.addPlayer(p3)
+
+mySchool = School("My School")
+mySchool.addTeam(red_team)
+mySchool.addTeam(blue_team)
+
+print("Total players in mySchool:", mySchool.getTotalPlayersInSchool())
