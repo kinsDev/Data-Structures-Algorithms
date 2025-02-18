@@ -26,16 +26,18 @@ class Person:
         self.name = name
         self.country = country
     
-    def printDetails(self):
+    def printDetails(self): # overridden method
         print("Person Name:", self.name)
         self.country.printDetails()
 
 
 c = Country("Wales", 1500)
-p = Person("Joe", c)
+p = Person("Joe", c) # c calls the object of the Country class.
 p.printDetails()
 
 # deletes the object p
 del p
 print("")
 c.printDetails()
+
+# Even after deleting the object P for Person class, the Country class still remains unaffected, Vice versa could be performed 
