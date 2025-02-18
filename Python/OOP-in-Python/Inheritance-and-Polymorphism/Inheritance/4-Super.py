@@ -49,7 +49,7 @@ class Vehicle:
 
 class Car(Vehicle):
     def __init__(self, make, color, model, doors):
-        super().__init__(self, make, color, model)
+        super().__init__(make, color, model)
         self.doors = doors
 
     def printCarDetails(self):
@@ -59,3 +59,6 @@ class Car(Vehicle):
 
 obj1 = Car("Suzuki", "Grey", "2024", 4)
 obj1.printCarDetails()
+
+obj2 = Vehicle("Mercedes", "Red", "2024")
+obj2.printDetails()
