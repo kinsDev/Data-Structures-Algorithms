@@ -5,7 +5,7 @@
 
 # A class can be thought of as a capsule, having methods, properties, and objects inside it.
 
-# When encapsulating a class , a good convention is to declare all variables in that class
+# When encapsulating a class, a good convention is to declare all variables in that class
 # as private to prevent access by code outside the class.
 
 # If the methods and variables are encapsulated in a class, then how can they be used outside of that class?
