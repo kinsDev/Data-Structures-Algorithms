@@ -147,7 +147,7 @@ square = Square(5)
 
 
 
-`# challenge 7:
+# challenge 7:
 # Override the print_continent method for the derived classes
 #This coding challenge will test your concepts on inheritance and polymorphism. You are asked to create a class Country that will contain a name attribute.
 #You will be provided with base classes that inherit from the Country class . You will need to add a method to the derived classes called print_continent that will state which continent that country belongs to.
