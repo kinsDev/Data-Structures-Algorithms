@@ -34,7 +34,7 @@ class LinkedList:
 
     def binary_to_decimal(self):
         if self.head == None:
-            return None
+            return 0
 
         # 1. Find the length of the LinkedList
         length = 0
