@@ -55,46 +55,27 @@ class LinkedList:
 #   +===================================================+
 
     def partition_list(self, x):
-        # I was thinking that first of all if the linked list if empty then we should definitely return None
         if self.head is None:
             return None
-        # Another thing that I thought was, if the linked list has only 1 element, whatever value of x we are given, we should only return that value in the linked list
-        if self.head.next is None:
-            return self.head
-        # right here I wanted to go through the list picking values less than x and putting them in a chain linked list stored in object list1 and so on for list2
-        # I also figured that I could place a pointer to self.head to represent the value that we will be comparing with x.
-        temp = self.head
-        list1 = LinkedList()
-        list2 = LinkedList()
-        # I'm not sure whether this will even work, but I was betting on the the fact that the chained values could be stored in separate linked lists in this manner
-        # while the self.head from the original Linked List is not None, I want to perform the following if statements
-        while temp:
-            if x < temp.value:
-                list1.append(temp.value)
+
+        dummy1 = Node(0)
+        dummy2 = Node(0)
+        prev1 = dummy1
+        prev2 = dummy2
+
+        current = self.head
+        while current is not None:
+            if current.value < x:
+                prev1.next = current
             else:
-                list2.append(temp.value)
-            temp = temp.next
-        # there's another edge case that I hadn't looked at yet.
-        # If list one was actually empty, we would have to return list prev2
-        if list1.head is None:
-            return list2.head
-        # We are going to set the head of list1 to prev1
-        # as long as prev.next is not None, we want to move prev1 to the next nodes
-        # once we reach to end of list1, we will have prev1 positioned to the last nodes\
-        # we will connect the last node of list1 with the first node of list2(list2.head)
-        # and form a single linked list called list1
-        if list1.head is None:  # if list1 was empty we should simply return list2
-            return list2.head
+                prev2.next = current
+            current = current.next
 
-        prev1 = list1.head
-        while prev1.next is not None:
-            prev1 = prev1.next  # moving to the last node of list1
+        prev1.next = None
+        prev2.next = None
+        prev1.next = dummy2.next
 
-        if list2.head is None:
-            return list1.head  # this way I will be returning all elemnts of list1 if list2 is empty
-        prev1.next = list2.head
-        # return the head of the new partitioned list
-        return list1.head
+        self.head = dummy1.next
 
 
 #  +=====================================================+
