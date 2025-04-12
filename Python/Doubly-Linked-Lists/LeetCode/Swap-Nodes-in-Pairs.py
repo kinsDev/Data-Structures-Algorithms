@@ -31,7 +31,7 @@ class DoublyLinkedList:
             new_node.prev = temp
         self.length += 1
         return True
-
+    
     def swap_pairs(self):
         if self.head is None or self.head.next is None:
             return False  # Nothing to swap
@@ -60,9 +60,6 @@ class DoublyLinkedList:
             # Move to the next pair
             prev_node = first
             current = next_pair
-
-        return True
-
 
 my_dll = DoublyLinkedList(1)
 my_dll.append(2)
@@ -94,9 +91,30 @@ my_dll.print_list()
 """
     ANOTHER SOLUTION:
     ----------------
+    def swap_pairs(self):
+        dummy_node = Node(0)
+        dummy_node.next = self.head
+        previous_node = dummy_node
 
+        while self.head and self.head.next:
+            first_node = self.head
+            second_node = self.head.next
 
+            previous_node.next = second_node
+            first_node.next = second_node.next
+            second.next = first_node
 
+            second_node.prev = previous_node
+            first_node.prev = second_node
+
+            if first_node.next:
+                first_node.next.prev = first_node
+
+            self.head = first_node.next
+            previous_node = first_node
+        self.head = dummy_node.next
+        if self.head:
+            self.head.prev = None
     ----------------
 """
 
