@@ -1,10 +1,11 @@
 # First we will create a constructor for a hash table
 class HashTable:
-    def __init__(self, size = 5):
+    def __init__(self, size = 11):
+        # this line create a list of empty slots initialized to None
         self.data_map = [None] * size
 
 # The we create a hash table function
-    def __hash(self, key):
+    def __hash(self, key): # we have used __hash to encapsulate the method only to this class
         # we need to initialize a variable to store the hash map
         # we should go through each letter in a key and calculate the hash map value
         # As we calculate that value we will add the current hash value to the ordinal(gets the ASCII number for each letter as we loop through)
