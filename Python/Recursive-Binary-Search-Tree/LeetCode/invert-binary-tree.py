@@ -47,21 +47,32 @@ class BinarySearchTree:
     #   |   swap of the children.                           |
     #   +===================================================+
     def __invert_tree(self, node):
-        # base case: if the current node is none, there is nothing to invert
+        # Check if the current node is None. This happens when the tree is empty
+        # or we've reached a leaf node's child. It's the base case for our recursion.
         if node is None:
             return None
 
-        # recursively invert the left subtree
-        left_inverted = self.__invert_tree(node.left)
+        # Before swapping, save the original left child of the node in a temporary
+        # variable. This is crucial because we're about to overwrite node.left with
+        # the inverted right subtree, and we need to preserve the original left subtree
+        # for inverting it next.
+        temp = node.left
 
-        # recursively invert the right subtree
-        right_inverted = self.__invert_tree(node.right)
+        # Recursively invert the right subtree of the current node and assign it
+        # to the left child of the current node. This begins the process of swapping
+        # the left and right children of the node.
+        node.left = self.__invert_tree(node.right)
 
-        # swap the left and right children of the current node
-        node.left = right_inverted
-        node.right = left_inverted
+        # Now, invert the original left subtree (which we've saved in temp) and assign
+        # it to the right child of the current node. This completes the swapping process.
+        # Note that we use the preserved original left subtree for this, ensuring that
+        # each child is correctly inverted and placed.
+        node.right = self.__invert_tree(temp)
 
-        # return the current node (which now has the inverted children)
+        # Return the current node. Now that its children have been swapped (inverted),
+        # it's part of the newly inverted tree structure. This return statement allows
+        # the recursion to work its way up, inverting each node's children from the bottom
+        # of the tree to the top.
         return node
 
 #  +====================================================+
