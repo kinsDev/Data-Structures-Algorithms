@@ -34,7 +34,7 @@ class BinarySearchTree:
         result = []
         self._inorder_helper(node, result)
         return result
-
+ 
     def _inorder_helper(self, node, result):
         if node:
             self._inorder_helper(node.left, result)
